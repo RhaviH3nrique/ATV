@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .menu-item {
+  list-style: none;
+  padding: 13px;
+}
+
+.menu-item a {
+  text-decoration: none;
+  color: grey;
+  display: block;
+}
+
+.menu-item a:hover {
+  cursor: pointer;
+}
+
+    </style>
+</head>
+<body>
+    <ul id="menu">
+        <li class="menu-item"><a href="#">Home</a></li>
+        <li class="menu-item"><a href="#">About</a></li>
+        <li class="menu-item"><a href="#">Services</a></li>
+        <li class="menu-item"><a href="#">Contact</a></li>
+        <li class="menu-item"><a href="#">Social Media</a></li>
+      </ul>
+<script>
+const menuItems = document.querySelectorAll('.menu-item a');
+
+menuItems.forEach(item => {
+  item.addEventListener('mouseover', () => {
+    item.style.fontWeight = 'bold';
+    item.style.backgroundColor = '#f0f0f0';
+  });
+
+  item.addEventListener('mouseout', () => {
+    item.style.fontWeight = 'normal';
+    item.style.backgroundColor = 'transparent';
+  });
+});
+
+</script>      
+</body>
+</html>
